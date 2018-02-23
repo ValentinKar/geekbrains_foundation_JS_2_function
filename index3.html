@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Homework 2.</h1>
+  <h2>Task 3.</h2>
+
+  <script>
+    "use strict"; 
+  
+    /**
+     * 3. Объявить две переменные a и b и задать им целочисленные 
+     * произвольные начальные значения.
+     * Затем написать скрипт, который работает по следующему принципу:
+     * - если a и b положительные, вывести их разность 
+     * (ноль можно считать положительным числом);
+     * - если а и b отрицательные, вывести их произведение;
+     * - если а и b разных знаков, вывести их сумму;
+     * @var {number} a.
+     * @var {number} b.
+     */
+     const a = getRandomInt(-50, 50); 
+     const b = getRandomInt(-50, 50); 
+
+     numbersOutput(a, b); 
+
+    /**
+     * Функция возвращает случайное целое число из диапазона 
+     * [min, max].
+     * @param {number} min - минимально возможное число.
+     * @param {number} max - максимально возможное число.
+     */
+     function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+     }; 
+
+    /**
+     * Функция выводит в консоль разность или произведение 
+     * или сумму чисел, в зависимости от из значений.
+     * @param {number} a.
+     * @param {number} b.
+     */
+     function numbersOutput() {
+       console.log(a >= 0 && b >= 0 ? `a - b = ${a - b}` : ``); 
+       console.log((a < 0 && b < 0) ? `a * b = ${a * b}` : ``); 
+       console.log((a < 0 && b >= 0) || (a >= 0 && b < 0) 
+        ? `a + b = ${a + b}` 
+        : ``); 
+     };
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Homework 2.</h1>
+  <h2>Task 6.</h2>
+
+  <script>
+    "use strict"; 
+  
+    /**
+     * 6. Реализовать функцию с тремя параметрами: 
+     * function mathOperation(arg1, arg2, operation),
+     * где arg1, arg2 – значения аргументов, operation – 
+     * строка с названием операции. В зависимости от
+     * переданного значения операции (использовать switch) 
+     * выполнить одну из арифметических операций
+     * (использовать функции из задания 5) и 
+     * вернуть полученное значение.
+     * @var {number} arg1.
+     * @var {number} arg2.
+     * @var {string} operation - строка арифметического действия.
+     * @var {string} arg3 - арифм. действие м/у arg1 и arg2.
+     */
+     const arg1 = getRandomInt(-50, 50); 
+     const arg2 = getRandomInt(0, 15); 
+     const operation = stringOfOper(1, 4); 
+     const arg3 = mathOperation(arg1, arg2, operation);
+
+       console.log(arg1); 
+     console.log(arg2); 
+       console.log(operation); 
+     console.log(arg3); 
+
+    /**
+     * Функция возвращает случайное целое арифметическое 
+     * действие.
+     */
+     function stringOfOper()  { 
+       switch (getRandomInt(1, 4))  {
+         case 1: return '+'; 
+         case 2: return '-'; 
+         case 3: return '*'; 
+         case 4: return ':'; 
+         default: return '+'; 
+       }; 
+     }; 
+
+    /**
+     * Функция возвращает случайное целое число из диапазона 
+     * [min, max].
+     * @param {number} min - минимально возможное число.
+     * @param {number} max - максимально возможное число.
+     */
+     function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+     }; 
+
+    /**
+     * Функция возвращает сумму чисел  
+     */
+     function sumOfNumbers(a, b)  { 
+       return a + b; 
+     }; 
+
+    /**
+     * Функция возвращает разность чисел  
+     */
+     function differenceOfNumbers(a, b)  { 
+       return a - b; 
+     }; 
+
+    /**
+     * Функция возвращает произведение чисел  
+     */
+     function multiplicationOfNumbers(a, b)  { 
+       return a * b; 
+     }; 
+     
+    /**
+     * Функция возвращает частное чисел  
+     */
+     function divisionOfNumbers(a, b)  { 
+       return a / b; 
+     }; 
+
+    /**
+     * Функция производит случайное арифметическое действие 
+     * между случайными арифметическими числами.
+     * @var {number} arg1.
+     * @var {number} arg2.
+     * @var {string} operation - строка арифметического действия.
+     */
+     function mathOperation(arg1, arg2, operation)  {
+       switch (operation)  {
+         case '+': return sumOfNumbers(arg1, arg2); 
+         case '-': return differenceOfNumbers(arg1, arg2); 
+         case '*': return multiplicationOfNumbers(arg1, arg2); 
+         case ':': return divisionOfNumbers(arg1, arg2); 
+         default: return 'error'; 
+       }; 
+     }; 
+  </script>
+</body>
+</html>

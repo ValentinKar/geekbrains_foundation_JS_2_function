@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Homework 2.</h1>
+  <h2>Task 5.</h2>
+
+  <script>
+    "use strict"; 
+  
+    /**
+     * 5. Реализовать основные 4 арифметические 
+     * операции (+, -, /, *) в виде функций с двумя параметрами.
+     * Обязательно использовать оператор return.
+     * @var {number} a.
+     * @var {number} b.
+     */
+     const a = getRandomInt(-50, 50); 
+     const b = getRandomInt(0, 15); 
+
+    /**
+     * Функция возвращает случайное целое число из диапазона 
+     * [min, max].
+     * @param {number} min - минимально возможное число.
+     * @param {number} max - максимально возможное число.
+     */
+     function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+     }; 
+
+    /**
+     * Функция возвращает сумму чисел  
+     */
+     function sumOfNumbers()  { 
+       return a + b; 
+     }; 
+
+    /**
+     * Функция возвращает разность чисел  
+     */
+     function differenceOfNumbers()  { 
+       return a - b; 
+     }; 
+
+    /**
+     * Функция возвращает произведение чисел  
+     */
+     function multiplicationOfNumbers()  { 
+       return a * b; 
+     }; 
+     
+    /**
+     * Функция возвращает частное чисел  
+     */
+     function divisionOfNumbers()  { 
+       return a / b; 
+     }; 
+
+       console.log(`сумма чисел ${a} и ${b}: ${sumOfNumbers(a, b)}`); 
+     console.log(`разность чисел ${a} и ${b}: ${differenceOfNumbers(a, b)}`); 
+       console.log(`произведение чисел ${a} и ${b}: ${multiplicationOfNumbers(a, b)}`); 
+     console.log(`частное чисел ${a} и ${b}: ${divisionOfNumbers(a, b)}`); 
+  </script>
+</body>
+</html>

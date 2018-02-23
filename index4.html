@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Homework 2.</h1>
+  <h2>Task 4.</h2>
+
+  <script>
+    "use strict"; 
+  
+    /**
+     * 4. Переменной а должно присваиваться случайное целое 
+     * число в промежутке [0, 15]. С помощью оператора switch необходимо 
+     * организовать вывод чисел от этой переменной a до 15.
+     * @var {number} a.
+     */
+     const a = getRandomInt(0, 15); 
+     numberSelect(a); 
+     
+    /**
+     * Функция возвращает случайное целое число из диапазона 
+     * [min, max].
+     * @param {number} min - минимально возможное число.
+     * @param {number} max - максимально возможное число.
+     */
+     function getRandomInt(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+     }; 
+
+    /**
+     * Функция использует переключатель switch для a
+     * @param {number} a.
+     */
+     function numberSelect(a)  { 
+        switch (a)  {
+          case 1: numberOutput(a); 
+          break; 
+          case 2: numberOutput(a); 
+          break; 
+          case 3: numberOutput(a); 
+          break; 
+          case 4: numberOutput(a); 
+          break; 
+          case 5: numberOutput(a); 
+          break; 
+          case 6: numberOutput(a); 
+          break; 
+          case 7: numberOutput(a); 
+          break; 
+          case 8: numberOutput(a); 
+          break; 
+          case 9: numberOutput(a); 
+          break; 
+          case 10: numberOutput(a); 
+          break; 
+          case 11: numberOutput(a); 
+          break; 
+          case 12: numberOutput(a); 
+          break; 
+          case 13: numberOutput(a); 
+          break; 
+          case 14: numberOutput(a); 
+          break; 
+          case 15: numberOutput(a); 
+          break; 
+          default: console.log(`неизвестное число`); 
+        };
+     }; 
+
+    /**
+     * Функция выводит на консоль константу a
+     * @param {number} a.
+     */
+     function numberOutput(a)  {
+       console.log(a); 
+     }; 
+  </script>
+</body>
+</html>
